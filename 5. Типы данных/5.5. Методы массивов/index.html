@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="firstLoad()">
+    <section>
+        <h2>Добвление/удаление эллементов</h2>
+        <div class="line">
+            <div class="sec" id="outTab">1</div>
+            <div class="sec">
+                <button onclick="AddUnsh()">Добавить эллемент в начало</button>
+                <button onclick="DelShf()">Удалить первый</button>
+                <button onclick="AddPush()">Добавить эллемент в конец</button>
+                <button onclick="DelPop()">Удалить ппоследний</button>
+                <button onclick="DelOpr()">Удалить определнный</button>
+            </div>
+        </div>
+        <h2>Метод .ForEach</h2>
+        <div class="line">
+            <div class="sec" id="outTab2">1</div>
+            <div class="sec">
+                <button onclick="SubAll()">Умножить массив</button>
+                <button onclick="UpAll()">Возвести в степень</button>
+            </div>
+        </div>
+        <h2>Поиск по объектам массива</h2>
+        <div class="line">
+            <div class="sec lineBl" id="outTab3">1</div>
+            <div class="sec">
+                <button onclick="findUser()">Найти эллемент</button>
+                <button onclick="filterUser()">filter</button>
+            </div>
+        </div>
+        <h1 id="razdel">перобразование масивов</h1>
+        <h2>Метод map</h2>
+        <div class="line">
+            <div class="sec" id="outTab4">1</div>
+            <div class="sec">
+                <button onclick="returnDlinu()">Вернуть длину эллемента</button>
+                <button onclick="returnMutation()">Вернуть длину эллемента</button>
+            </div>
+        </div>
+        <h2>Split ang  Join</h2>
+        <div class="line">
+            <div class="sec" id="outTab5">Российские власти должны освободить задержанного в аннексированном Крыму Владислава Есипенко, а Украина и международное сообщество – усилить давление на Россию за преследования на аннексированном полуострове. Об этом говорится в совместном заявлении украинских правозащитников 16 марта, сообщает Крымская правозащитная группа.</div>
+            <div class="sec">
+                <button class="enab" id="butMap" onclick="returnSplit()">split</button>
+                <button class="disab" id="butJoin" onclick="returnJoin()">join</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
