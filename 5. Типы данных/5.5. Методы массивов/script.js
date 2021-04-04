@@ -7,6 +7,7 @@ function firstLoad() {
     reNewAr2(ar2)
     reNewAr3()
     reNewAr4(ar1)
+    reNewAr6(ar2)
 }
 function reNewAr1() {
     document.getElementById('outTab').innerText=''
@@ -50,6 +51,14 @@ function reNewAr5(masive) {
     let count=1
     for (let a of masive){
         document.getElementById('outTab5').innerText += `${count}. ${a}\n`
+        count++
+    }
+}
+function reNewAr6(masive) {
+    document.getElementById('outTab6').innerText=''
+    let count=1
+    for (let a of masive){
+        document.getElementById('outTab6').innerText += `${count}. ${a}\n`
         count++
     }
 }
@@ -153,4 +162,10 @@ function returnSplit() {
 function returnJoin() {
     let myArr =  myArrText.join(' ')
     document.getElementById('outTab5').innerText=myArr
+    document.getElementById('butJoin').classList.replace('enab', 'disab')
+    document.getElementById('butMap').classList.replace('disab', 'enab')
+}
+function returnSplit() {
+    let newArr = ar2.reduce((sum, curent) => sum+curent,0)
+    alert(newArr)
 }
