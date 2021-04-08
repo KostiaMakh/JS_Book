@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    let count={
+        on:false
+    }
+    function hello() {
+        alert('hello')
+    }
+    let a = setTimeout(()=>window.hello(), 2000)
+    alert(`внутреняя ширина окна ${window.innerHeight}. Щирина его ${window.innerWidth}`)
+
+    function changeColor() {
+        if (count.on === false){
+            document.body.style.backgroundColor = 'red'
+            count.on=true
+        } else {
+            document.body.style.backgroundColor = 'green'
+            count.on=false
+        }
+
+    }
+
+</script>
+<body>
+    <button type="button" onclick="changeColor()">Заменить цвет</button>
+</body>
+</html>
