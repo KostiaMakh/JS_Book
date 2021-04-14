@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span{
+            margin-bottom: 20px;
+            display: block;
+        }
+        input{
+            display: block;
+            margin-bottom: 20px;
+        }
+        #plusOne{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border: 1px black solid;
+            border-radius: 3px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #minusOne{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border: 1px black solid;
+            border-radius: 3px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+        .mineInput{
+            font-family: Arial;
+            font-syle: italic;
+        }
+        .mineInput[styling = 'green']{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 styling="green" class="mineInput">Это заголовок</h1>
+        <span class="mineInput">Это текст</span>
+        <input type="color">
+        <input type="date">
+        <input type="file">
+        <input type="image" >
+        <input type="search">
+        <input id="typeRange"type="range" onchange="showV()">
+        <span id="resultRange">0</span>
+        <span id="minusOne" onclick="minOne()">-</span>
+        <span id="plusOne" onclick="addOne()">+</span>
+        <input type="week">
+        <button type="button" onclick="showValue()">Показать</button>
+    </div>
+</body>
+<script>
+
+    alert(document.getElementById('typeRange').getAttribute('id'))
+
+    alert(`Перечень свойств конпки плюс ` + document.getElementById('plusOne').getAttribute('onclick'))
+    let a = document.body.querySelector('div')
+    a.hidden=false
+    a.title = 'mineDiv'
+    a.id = 'superDiv'
+
+    function showValue() {
+        let b = document.getElementById('typeRange')
+        alert(b.value)
+    }
+    function showV() {
+        let b = document.getElementById('typeRange')
+        let c = document.getElementById('resultRange')
+        c.innerText=b.value
+    }
+
+    function addOne() {
+        let b = document.getElementById('typeRange')
+        b.value++
+        showV()
+    }
+    function minOne() {
+        let b = document.getElementById('typeRange')
+        b.value--
+        showV()
+    }
+</script>
+</html>

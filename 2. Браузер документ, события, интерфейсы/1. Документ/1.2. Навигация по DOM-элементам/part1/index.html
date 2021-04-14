@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="section1">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+    </section>
+<form>
+    <button type="button" onclick="changeColor(1)">Заменить первый</button>
+    <button type="button" onclick="changeColor(2)">Заменить второй</button>
+    <button type="button" onclick="changeColor(3)">Заменить третий</button>
+    <input type="color" id="color">
+</form>
+</body>
+<script>
+    function changeColor(divNumber) {
+        let color = document.getElementById('color').value
+        let block
+        if (divNumber===1){
+            block = document.getElementById('section1').firstElementChild
+        }
+        else if (divNumber===3){
+            block = document.getElementById('section1').lastElementChild
+        }
+        else {
+            // предвартиельный вариант навигации
+            /*block = document.getElementById('section1').childNodes[divNumber*2-1]*/
+            block = document.getElementById('section1').children[divNumber-1]
+        }
+
+        block.style.backgroundColor = color
+    }
+</script>
+</html>

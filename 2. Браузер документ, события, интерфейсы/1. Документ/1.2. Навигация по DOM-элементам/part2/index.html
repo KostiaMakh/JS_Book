@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100%;
+        }
+        .a1{
+            background-color: red;
+        }
+        .a2{
+            background-color: green;
+        }
+        .a3{
+            background-color: pink;
+        }
+        .a4{
+            background-color: mediumpurple;
+        }
+        .befAft{
+            background-color: black;
+        }
+        .pressB{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+ <section>
+     <div id="btn1" class="a1" onclick="showNext(this.id)"></div>
+     <div id="btn2" class="a2" onclick="showNext(this.id)"></div>
+     <div id="btn3" class="a3" onclick="showNext(this.id)"></div>
+     <div id="btn4" class="a4" onclick="showNext(this.id)"></div>
+ </section>
+</body>
+    <script>
+        function showNext(a) {
+            //Базовые классы
+            let button1='a1'
+            let button2='a2'
+            let button3='a3'
+            let button4='a4'
+            //классы для переформатирования
+            let removeClass
+            let prev
+            let next
+            //Предыдущие и последующие классы
+            if (a==='btn1') {
+                removeClass='a1'
+                next = 'a2'
+            }
+            else if (a==='btn2') {
+                prev = 'a1'
+                removeClass='a2'
+                next = 'a3'
+            }
+            else if (a==='btn3') {
+                prev = 'a2'
+                removeClass='a3'
+                next = 'a4'
+            }
+            else if (a==='btn4') {
+                prev = 'a3'
+                removeClass='a4'
+            }
+            //меняем кнопку нажатую
+            let press1 = document.getElementById(a)
+            press1.classList.replace(removeClass, 'pressB')
+            //меняем кнопку после
+            let pressNext = document?.getElementById(a).nextElementSibling
+            pressNext.classList.replace(next, 'befAft')
+            //меняем кнопку до
+            let pressPrev = document?.getElementById(a).previousElementSibling
+            pressPrev .classList.replace(prev, 'befAft')
+        }
+    </script>
+</html>

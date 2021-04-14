@@ -1,0 +1,18 @@
+section div {
+  height: 200px;
+  width: 100%; }
+section .first {
+  background-color: darkseagreen; }
+section .second {
+  background-color: coral; }
+section .third {
+  background-color: yellow; }
+
+form {
+  padding-top: 30px; }
+  form button, form input {
+    padding: 20px;
+    margin-right: 20px;
+    font-size: 20px; }
+
+/*# sourceMappingURL=style.css.map */
