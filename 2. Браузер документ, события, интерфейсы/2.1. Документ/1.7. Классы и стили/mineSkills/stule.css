@@ -1,0 +1,11 @@
+.sect1 {
+    background-color: yellowgreen;
+}
+.sect2{
+    background-color: lightpink;
+}
+section{
+    height: 200px;
+    width: 100%;
+    margin-top: 0px;
+}

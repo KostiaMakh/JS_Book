@@ -1,0 +1,25 @@
+.ItemDiv{
+    height: 300px;
+    background-color: mintcream;
+    border: 15px solid gray;
+    position: relative;
+}
+.InnerDiv {
+    position: absolute;
+    height: 80px;
+    border: 10px solid cornflowerblue;
+    border-left: 25px solid cornflowerblue;
+    background-color: beige;
+    width: 200px;
+    left: 30px;
+    top: 70px;
+    overflow: scroll;
+
+}
+.but{
+    padding: 20px;
+    font-size: 20px;
+}
+*{
+    box-sizing: border-box;
+}

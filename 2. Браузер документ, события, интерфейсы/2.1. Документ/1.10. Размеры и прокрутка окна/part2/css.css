@@ -1,0 +1,17 @@
+section{
+    width: 500px;
+    margin: auto;
+    border: 2px black solid;
+    padding: 10px;
+}
+p{
+    line-height: 35px;
+    font-size: 18px;
+}
+button{
+    background-color: lightpink;
+    color: red;
+    padding: 5px;
+    font-weight: bolder;
+    font-size: 20px;
+}

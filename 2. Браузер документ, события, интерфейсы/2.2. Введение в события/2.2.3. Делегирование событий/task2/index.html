@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="menu">
+        <button data-action="save">Сохранить</button>
+        <button data-action="load">Загрузить</button>
+        <button data-action="restart">Перезапустить</button>
+    </div>
+<script>
+    class Menu {
+        constructor(elem) {
+            this._elem = elem
+            elem.onclick=this.onClick.bind(this)
+        }
+        save(){
+            alert('Cохраняю')
+            setTimeout(()=>alert('СОХРАНИЛ!!!!'),2000)
+        }
+        load(){
+            alert('Загружаю')
+            alert('Процесс загрузки!!!')
+            alert('Загрузил')
+        }
+        onClick(event){
+            let action = event.target.dataset.action
+            if (action){
+                this[action]()
+            }
+        }
+    }
+
+    new Menu(menu)
+</script>
+</body>
+</html>

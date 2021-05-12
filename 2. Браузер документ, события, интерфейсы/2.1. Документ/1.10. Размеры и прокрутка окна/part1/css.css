@@ -1,0 +1,16 @@
+
+button{
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+form{
+    padding: 10px;
+    border: 2px green solid;
+}
+form button {
+    margin-bottom: 0;
+}
+body{
+    height: 200vh;
+}
