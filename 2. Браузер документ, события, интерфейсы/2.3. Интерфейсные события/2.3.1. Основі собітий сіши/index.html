@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: mistyrose;
+    }
+    #hoverS{
+        display: block;
+        padding: 20px;
+        margin: 30px;
+        background-color: darkseagreen;
+        user-select: none;
+    }
+    #dblCLC{
+        display: block;
+        padding: 20px;
+        margin: 30px;
+        background-color: darkseagreen;
+        cursor: pointer;
+        user-select: none;
+    }
+    span{
+        border-radius: 10px;
+    }
+    #blockWithLight{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #leftB{
+        width: 20%;
+        display: block;
+        padding: 20px;
+        margin: 30px;
+        background-color: darkseagreen;
+        cursor: pointer;
+        user-select: none;
+    }
+    #rightB{
+        width: 65%;
+        display: block;
+        padding: 20px;
+        margin: 30px;
+        background-color: grey;
+        cursor: pointer;
+        user-select: none;
+    }
+    #wthCtrl{
+        display: block;
+        padding: 20px;
+        margin: 30px;
+        background-color: darkseagreen;
+        cursor: pointer;
+        user-select: none;
+    }
+</style>
+
+<body>
+    <span id="hoverS">Наведи</span>
+    <span id="dblCLC">Нажми дважды</span>
+    <div id="blockWithLight">
+        <span id="leftB">Нажми и измени цветклавши</span>
+        <span id="rightB"></span>
+    </div>
+    <span id="wthCtrl">Зажми Ctrl+ нажки левую клавишу мыши</span>
+
+    <script>
+        let aCounter ={
+            control:false,
+            control2:false,
+            control3:false
+        }
+        hoverS.onmouseover= function (element) {
+            element.target.style.backgroundColor='red'
+            element.target.style.transition = '0.5s'
+        }
+        hoverS.onmouseout= function (element) {
+            element.target.style.backgroundColor='darkseagreen'
+        }
+        hoverS.oncontextmenu= function (elem) {
+            alert('Вылетело менюха')
+            return false
+        }
+        //dbl click on form
+        dblCLC.ondblclick = function (element) {
+            if (aCounter.control===false) {
+                element.target.style.backgroundColor = 'pink'
+                aCounter.control=true
+            }
+            else {
+                element.target.style.backgroundColor = 'darkseagreen'
+                aCounter.control=false
+            }
+
+        }
+        leftB.onclick = function () {
+            let changeButton = document.getElementById('rightB')
+            if (aCounter.control2===false) {
+                changeButton.style.backgroundColor = 'pink'
+                aCounter.control2=true
+            }
+            else {
+                changeButton.style.backgroundColor = 'grey'
+                aCounter.control2=false
+            }
+
+        }
+        leftB.ondblclick = function () {
+            let changeButton = document.getElementById('rightB')
+            if (aCounter.control3===false) {
+                changeButton.style.backgroundColor = 'green'
+                aCounter.control3=true
+            }
+            else {
+                changeButton.style.backgroundColor = 'blue'
+                aCounter.control3=false
+            }
+        }
+        wthCtrl.onclick = function (element) {
+            if (event.ctrlKey){
+                setTimeout(()=>{
+                    alert('Всё получилось')
+                }, 3000)
+
+            }
+        }
+    </script>
+</body>
+</html>
